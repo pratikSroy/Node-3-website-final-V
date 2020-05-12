@@ -35,7 +35,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'Your mom gayer.',
+        helpText: 'This is some helpful text.',
         title: 'Help',
         name: 'Andrew Mead'
     })
@@ -45,7 +45,7 @@ app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.render('404',{
             title: '404',
-            name: 'Andrew Mead',
+            name: 'Pratik Sharma',
             errorMessage: 'Address not found.'
         })
     }
@@ -84,7 +84,7 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Andrew Mead',
+        name: 'Pratik',
         errorMessage: 'Help article not found.'
     })
 })
@@ -92,7 +92,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Andrew Mead',
+        name: 'Pratik Sharma',
         errorMessage: 'Page not found.'
     })
 })
